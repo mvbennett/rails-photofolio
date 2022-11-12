@@ -5,7 +5,13 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+require 'open-uri'
+
 User.destroy_all
 
 mike = User.new(email: 'mike@mike.com', password: '1234567')
+mike.save!
+
+# photo_one = File.read('app/assets/images/1.jpg')
+mike.photos.attach(io: photo_one, filename: '1.jpg', content_type: 'image/jpg')
 mike.save!
