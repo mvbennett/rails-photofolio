@@ -41,11 +41,6 @@ const Gallery = (
           })
         }
       </div>
-      {/* <div className="full-div">
-        {
-          selectedImg && (<FullPhoto img={selectedImg} />)
-        }
-      </div> */}
     </div>
   );
 };
