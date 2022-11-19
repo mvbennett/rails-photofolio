@@ -6,21 +6,24 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import PropTypes from 'prop-types'
 
-const Hello = props => (
-  <div>Hello {props.name}!</div>
+const root = document.getElementById("root");
+const photos = Object.values(JSON.parse(root.dataset.photos));
+
+const Hello = (photos) => (
+  <div><img src={photos.photos[0]} alt="" /></div>
 )
 
 Hello.defaultProps = {
   name: 'David'
 }
 
-Hello.propTypes = {
-  name: PropTypes.string
-}
+// Hello.propTypes = {
+//   name: PropTypes.string
+// }
 
 document.addEventListener('DOMContentLoaded', () => {
   ReactDOM.render(
-    <Hello name="React" />,
+    <Hello photos={photos}/>,
     document.body.appendChild(document.createElement('div')),
   )
 })

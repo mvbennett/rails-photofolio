@@ -4,6 +4,7 @@ class PagesController < ApplicationController
   def home
     @user = User.first
     @photos = []
-    @user.photos.each { |photo| @photos.push(Cloudinary::Utils.cloudinary_url(photo.key)) }
+    @user.photos.each { |photo| @photos.push([photo.key, "https://res.cloudinary.com/dduinomn4/image/upload/v1668830678/development/#{photo.key}.jpg"]) }
+    @photo_hash = @photos.to_h
   end
 end
