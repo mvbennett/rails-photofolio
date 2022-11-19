@@ -10,7 +10,7 @@ const root = document.getElementById("root");
 const photos = Object.values(JSON.parse(root.dataset.photos));
 
 const Hello = (photos) => (
-  <div>{photos}!</div>
+  <div><img src={photos.photos[0]} alt="" /></div>
 )
 
 Hello.defaultProps = {
