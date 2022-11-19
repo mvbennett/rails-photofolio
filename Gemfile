@@ -64,3 +64,7 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'cloudinary', '~> 1.16.0'
+
+gem 'react-rails'
+
+gem 'react_on_rails', '11.1.4'
