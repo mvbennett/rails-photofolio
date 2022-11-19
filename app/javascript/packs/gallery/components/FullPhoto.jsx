@@ -1,7 +1,6 @@
 import React from "react";
 
 const FullPhoto = ({ img, setSelectedImg }) => {
-  const imgUrl = img;
   const handleClick = () => {
     setSelectedImg(undefined);
   };
@@ -11,7 +10,7 @@ const FullPhoto = ({ img, setSelectedImg }) => {
   return img !== undefined && (
     <div>
       <img
-        src={imgUrl}
+        src={img}
         alt=""
         className="full-photo"
         onClick={handleClick}

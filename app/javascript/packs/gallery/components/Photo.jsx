@@ -5,14 +5,13 @@ const Photo = (
     img, setSelectedImg, photoCardClass
   }
 ) => {
-  const imgUrl = img;
   const handleClick = () => {
     setSelectedImg(img);
   };
   return (
     <div className={photoCardClass}>
       <img
-        src={imgUrl}
+        src={img}
         alt=""
         className="sm-photo"
         onClick={handleClick}

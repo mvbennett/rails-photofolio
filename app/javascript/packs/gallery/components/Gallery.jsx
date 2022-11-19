@@ -8,12 +8,11 @@ const Gallery = (
     selectedImg, setSelectedImg, photoCardClass, setPhotoCardClass, photos
   }
 ) => {
-  const photosArray = photos;
   return (
     <div className="full-gallery">
       <div className="gallery">
         {
-          photosArray.map((img) => {
+          photos.map((img) => {
             let component;
             if (img !== selectedImg) {
               component = (
