@@ -1,7 +1,7 @@
 import React from "react";
 
 const FullPhoto = ({ img, setSelectedImg }) => {
-  const imgUrl = `../../../assets/images/${img}.jpg`;
+  const imgUrl = img;
   const handleClick = () => {
     setSelectedImg(undefined);
   };

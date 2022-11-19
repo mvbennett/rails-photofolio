@@ -5,10 +5,10 @@ import FullPhoto from "./FullPhoto";
 
 const Gallery = (
   {
-    selectedImg, setSelectedImg, photoCardClass, setPhotoCardClass
+    selectedImg, setSelectedImg, photoCardClass, setPhotoCardClass, photos
   }
 ) => {
-  const photosArray = ['1', '2', '3', '4', '5', '6', '7', '8', '9'];
+  const photosArray = photos;
   return (
     <div className="full-gallery">
       <div className="gallery">

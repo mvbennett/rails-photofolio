@@ -5,7 +5,7 @@ const Photo = (
     img, setSelectedImg, photoCardClass
   }
 ) => {
-  const imgUrl = `../../../assets/images/${img}.jpg`;
+  const imgUrl = img;
   const handleClick = () => {
     setSelectedImg(img);
   };
