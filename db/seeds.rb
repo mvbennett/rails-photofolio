@@ -9,7 +9,7 @@ require 'open-uri'
 
 User.destroy_all
 
-mike = User.new(email: 'mike@mike.com', password: '1234567')
+mike = User.new(email: 'mike@mike.com', password: ENV['password'])
 mike.save!
 
 photo_one = URI.open('https://res.cloudinary.com/dduinomn4/image/upload/v1668295281/photofolio/1_elpxo7.jpg')
