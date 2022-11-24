@@ -11,6 +11,7 @@
     "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
     "bootstrap": "^5.2.2",
     "prop-types": "^15.8.1",
+    "start": "react-scripts --openssl-legacy-provider start",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "stimulus": "^3.1.1",
