@@ -7,4 +7,8 @@ class PagesController < ApplicationController
     @user.photos.each { |photo| @photos.push([photo.key, "https://res.cloudinary.com/dduinomn4/image/upload/v1668830678/production/#{photo.key}.jpg"]) }
     @photo_hash = @photos.to_h
   end
+
+  def edit
+    @user = current_user
+  end
 end

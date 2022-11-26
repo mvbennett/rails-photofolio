@@ -69,3 +69,5 @@ gem 'react-rails'
 
 gem 'react_on_rails', '11.1.4'
 gem 'mini_racer', platforms: :ruby
+
+gem 'pundit'
