@@ -27,7 +27,7 @@ class PhotographsController < ApplicationController
   def show
   end
 
-  def delete
+  def destroy
   end
 
   private
