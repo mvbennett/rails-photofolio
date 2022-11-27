@@ -12,6 +12,10 @@ User.destroy_all
 mike = User.new(email: 'mike@mike.com', password: ENV['password'])
 mike.save!
 
+gallery = Gallery.new(title: 'all')
+gallery.user = mike
+gallery.save!
+
 photo_one = URI.open('https://res.cloudinary.com/dduinomn4/image/upload/v1668295281/photofolio/1_elpxo7.jpg')
 photo_two = URI.open('https://res.cloudinary.com/dduinomn4/image/upload/v1668295281/photofolio/2_rcridv.jpg')
 photo_three = URI.open('https://res.cloudinary.com/dduinomn4/image/upload/v1668295281/photofolio/7_tuukaw.jpg')

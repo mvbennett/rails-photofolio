@@ -51,7 +51,7 @@ body {
 }
 
 .full-photo {
-  height: 80vh;
+  max-height: 80vh;
   width: 100%;
   object-fit: cover;
   border-radius: 4px;
@@ -61,4 +61,66 @@ body {
 .full-div {
   width: 100%;
   grid-column: 1/4;
+}
+
+@media (max-width: 950px) {
+  .sm-photo-card {
+    width: 270px;
+    height: 180px;
+  }
+}
+
+@media (max-width: 850px) {
+  .sm-photo-card {
+    width: 240px;
+    height: 160px;
+  }
+
+  .full-photo {
+    height: auto;
+  }
+}
+
+@media (max-width: 750px) {
+  .sm-photo-card {
+    width: 210px;
+    height: 140px;
+  }
+
+  .full-photo {
+    height: auto;
+  }
+}
+
+@media (max-width: 650px) {
+  .sm-photo-card {
+    width: 180px;
+    height: 120px;
+  }
+
+  .full-photo {
+    height: auto;
+  }
+}
+
+@media (max-width: 550px) {
+  .sm-photo-card {
+    width: 150px;
+    height: 100px;
+  }
+
+  .full-photo {
+    height: auto;
+  }
+}
+
+@media (max-width: 450px) {
+  .sm-photo-card {
+    width: 120px;
+    height: 80px;
+  }
+
+  .full-photo {
+    height: auto;
+  }
 }
