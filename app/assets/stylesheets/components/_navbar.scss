@@ -24,3 +24,14 @@
   color: whitesmoke;
   opacity: .7;
 }
+
+.navbar-brand {
+  color: whitesmoke;
+  padding: 0 8px;
+}
+
+.navbar-brand:hover {
+  color: whitesmoke;
+  text-decoration: underline;
+  transition: 5s;
+}
