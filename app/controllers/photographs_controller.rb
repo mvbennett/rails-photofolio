@@ -1,5 +1,21 @@
 class PhotographsController < ApplicationController
   def new
+    @photograph = Photograph.new
+
+    # authorize @photograph
+  end
+
+  def create
+    user = current_user
+    gallery = user.galleries.first
+    @photograph = Photograph.new(photograph_params)
+    @photograph.gallery = gallery
+
+    if @photograph.save
+      redirect_to root_path
+    else
+      redirect_to new_photograph_path
+    end
   end
 
   def edit
@@ -12,5 +28,11 @@ class PhotographsController < ApplicationController
   end
 
   def delete
+  end
+
+  private
+
+  def photograph_params
+    params.require(:photograph).permit(:title, :photo)
   end
 end
