@@ -7,4 +7,6 @@ class User < ApplicationRecord
   has_many_attached :photos
   has_many :galleries, dependent: :destroy
   has_many :photographs, through: :galleries, dependent: :destroy
+
+  validates :username, uniqueness: { case_sensitive: false }
 end

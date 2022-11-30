@@ -11,4 +11,6 @@ Rails.application.routes.draw do
       resources :photos, only: [:index, :new]
     end
   end
+
+  # get '/:username', to: 'users#show'
 end
