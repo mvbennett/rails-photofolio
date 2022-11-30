@@ -2,7 +2,7 @@ class PhotographsController < ApplicationController
   def new
     @photograph = Photograph.new
 
-    # authorize @photograph
+    authorize @photograph
   end
 
   def create

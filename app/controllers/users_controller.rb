@@ -4,5 +4,7 @@ class UsersController < ApplicationController
     photos = []
     user.galleries.first.photographs.each { |photograph| photos.push([photograph.photo.key, photograph.photo.url]) }
     @photo_hash = photos.to_h
+
+    authorize user
   end
 end
