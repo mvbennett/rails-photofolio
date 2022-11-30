@@ -3,7 +3,7 @@ class UsersController < ApplicationController
     if params[:id] != nil
       user = User.find(params[:id])
     elsif params[:username] != nil
-      user = User.where(username: params[:username])
+      user = User.where(username: params[:username]).first
     end
     photos = []
     user.galleries.first.photographs.each { |photograph| photos.push([photograph.photo.key, photograph.photo.url]) }

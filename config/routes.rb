@@ -12,5 +12,5 @@ Rails.application.routes.draw do
     end
   end
 
-  # get '/:username', to: 'users#show'
+  get '/:username', to: 'users#show'
 end
