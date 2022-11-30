@@ -1,9 +1,15 @@
 import React from "react";
+import { useState } from "react";
+import Button from "./Button";
 
 const New = () => {
+  const [valid, setValid] = useState(true)
   const handleUpload = (e) => {
+
     if (e.target.files[0].size > 10000000) {
-      alert("This file is too large and won't upload.");
+      setValid(false)
+    } else {
+      setValid(true)
     }
   }
 
@@ -19,7 +25,7 @@ const New = () => {
           <label class="form-label file required" for="photograph_photo">Photo <abbr title="required">*</abbr></label>
           <input class="form-control file required" type="file" name="photograph[photo]" id="photograph_photo" onChange={handleUpload}></input>
         </div>
-        <input type="submit" name="commit" value="Upload Photo" class="btn btn-primary" data-disable-with="Upload Photo"></input>
+        <Button valid={valid} />
       </form>
     </div>
   );
