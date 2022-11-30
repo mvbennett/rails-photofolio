@@ -15,3 +15,4 @@ ActiveStorage.start()
 import "controllers"
 import "bootstrap"
 import "../gallery"
+import "../form"
