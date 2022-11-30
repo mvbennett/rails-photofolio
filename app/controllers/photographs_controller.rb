@@ -9,6 +9,7 @@ class PhotographsController < ApplicationController
     user = current_user
     gallery = user.galleries.first
     @photograph = Photograph.new(photograph_params)
+    authorize @photograph
     @photograph.gallery = gallery
 
     if @photograph.save
