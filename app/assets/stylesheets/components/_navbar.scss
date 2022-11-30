@@ -18,11 +18,11 @@
 
 .nav-link {
   color: whitesmoke;
+  transition: color .7s;
 }
 
 .nav-link:hover {
-  color: whitesmoke;
-  opacity: .7;
+  color: hsl(0, 100, 50%);
 }
 
 .navbar-brand {
@@ -30,10 +30,10 @@
   padding: 0 8px;
   font-family: $title-font;
   font-size: 24px;
+  transition: text-decoration 1s;
 }
 
 .navbar-brand:hover {
   color: whitesmoke;
   text-decoration: underline;
-  transition: 5s;
 }
