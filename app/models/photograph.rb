@@ -5,9 +5,9 @@ class Photograph < ApplicationRecord
 
   validates :photo, presence: true
 
-  private
+  # private
 
-  def photo_size_validation
-    errors[:photo] << "should be less than 5MB" if photo.size > 5.megabytes
-  end
+  # def photo_size_validation
+  #   errors[:photo] << "should be less than 5MB" if photo.size > 5.megabytes
+  # end
 end
